@@ -83,12 +83,15 @@ const teamMembers = [
 ]
 
 const galleryImages = [
-  'https://images.unsplash.com/photo-1582981272457-6c027f7de1f3?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80',
+  '/images/hair-before-after.png',
+  '/images/hair-before-after-2.jpg',
+  '/images/hair-3.jpg',
+  '/images/nails-green-blue.jpg.png',
+  '/images/nails-cheetah-variety.jpg',
+  '/images/nails-dark-black.jpg',
+  '/images/fade-design-1.jpg.png',
+  '/images/star-design-cut.jpg.png',
+  '/images/neckline-design.jpg.png',
 ]
 
 const experienceItems = [
@@ -97,6 +100,11 @@ const experienceItems = [
   'Sharp barbering, polished nails, and finished hair',
   'Clean stations, fresh tools, and relaxed music',
 ]
+
+const heroBackground = {
+  backgroundImage:
+    "linear-gradient(90deg, rgba(12, 11, 9, 0.95), rgba(12, 11, 9, 0.74), rgba(12, 11, 9, 0.34)), url('/images/station-1.jpg.png')",
+}
 </script>
 
 <template>
@@ -113,7 +121,7 @@ const experienceItems = [
       <a class="nav-cta" href="#team">Book with GlossGenius</a>
     </nav>
 
-    <section id="top" class="hero section">
+    <section id="top" class="hero section" :style="heroBackground">
       <div class="hero-content">
         <p class="eyebrow">Cuts, nails, and finished styles</p>
         <h1>Tapered cuts, tipped nails, and polished style in one chair-to-chair studio.</h1>
@@ -129,9 +137,14 @@ const experienceItems = [
       </div>
 
       <div class="hero-card" aria-label="Featured appointment details">
+        <img
+          class="hero-logo"
+          src="/images/tapered-and-tipped-facebook.jpg"
+          alt="Tapered and Tipped Facebook logo"
+        >
         <span>Today&apos;s vibe</span>
         <strong>Clean fades, glossy sets, and styles that leave finished.</strong>
-        <p>Open today 9:00 AM - 7:00 PM</p>
+        <p>By appointment only in Durant, Oklahoma.</p>
       </div>
     </section>
 
@@ -178,7 +191,14 @@ const experienceItems = [
           <p class="eyebrow">Gallery</p>
           <h2>Placeholder visuals for cuts, nails, styling, and the studio</h2>
         </div>
-        <a class="text-link" href="#">Follow on Instagram</a>
+        <a
+          class="text-link"
+          href="https://www.facebook.com/profile.php?id=61578779285623"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow on Facebook
+        </a>
       </div>
 
       <div class="gallery-grid">
@@ -219,19 +239,19 @@ const experienceItems = [
       <div class="contact-grid">
         <div class="contact-card">
           <span>Address</span>
-          <p>1248 West Main Street<br>Suite 4, Austin, TX 78701</p>
+          <p>201 E Main St<br>Durant, OK 74701</p>
         </div>
         <div class="contact-card">
           <span>Hours</span>
-          <p>Mon - Fri: 9:00 AM - 7:00 PM<br>Sat: 10:00 AM - 5:00 PM</p>
+          <p>Mon - Fri: 9:00 AM - 7:00 PM<br>Sat: 9:00 AM - 6:00 PM<br>Sun: Closed</p>
         </div>
         <div class="contact-card">
-          <span>Phone</span>
-          <p>(512) 555-0198</p>
+          <span>Booking</span>
+          <p>By appointment only<br>Book each provider through GlossGenius</p>
         </div>
         <div class="contact-card">
           <span>Social</span>
-          <p>@taperedandtipped<br>Facebook / Instagram</p>
+          <p>Tapered and Tipped<br>Hablamos Espanol</p>
         </div>
       </div>
 
@@ -318,9 +338,8 @@ const experienceItems = [
   min-height: 100vh;
   align-items: end;
   padding-top: 7rem;
-  background:
-    linear-gradient(90deg, rgba(12, 11, 9, 0.95), rgba(12, 11, 9, 0.74), rgba(12, 11, 9, 0.34)),
-    url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=80') center / cover;
+  background-position: center;
+  background-size: cover;
   width: 100%;
   max-width: none;
   padding-left: max(1rem, calc((100vw - 1120px) / 2));
@@ -423,6 +442,16 @@ h3 {
   border-radius: 8px;
   background: rgba(17, 16, 13, 0.76);
   backdrop-filter: blur(14px);
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-card span,
