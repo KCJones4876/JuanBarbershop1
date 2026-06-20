@@ -41,44 +41,39 @@ const services = [
 
 const teamMembers = [
   {
-    name: 'Juan Rivera',
-    title: 'Owner & Lead Barber',
-    bio: 'The Juan and only behind the chair, known for crisp fades and a calm chairside experience.',
-    specialty: 'Skin fades, beard sculpting',
-    image:
-      'https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    name: 'Andre Wells',
+    name: 'Sam Holmes',
     title: 'Barber',
-    bio: 'Blends modern trends with practical everyday cuts that grow out clean.',
-    specialty: 'Modern cuts, tapers',
-    image:
-      'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80',
+    bio: 'A barber focused on sharp service, clean detail work, and a smooth appointment experience.',
+    specialty: 'Fades, beard work',
+    image: '/images/sam-holmes-logo.jpg',
   },
   {
-    name: 'Mia Santos',
-    title: 'Nail Tech',
-    bio: 'Balances clean natural sets with detailed art for clients who want a little shine.',
-    specialty: 'Gel manicures, chrome accents',
-    image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80',
+    name: 'Juan Garcia',
+    title: 'Barber',
+    bio: 'Known for detailed barbering and a station built around focused, one-on-one service.',
+    specialty: 'Tapers, custom cuts',
+    image: '/images/juan-work-station.jpg',
   },
   {
-    name: 'Lena Brooks',
-    title: 'Nail Tech',
-    bio: 'Known for crisp shaping, soft color palettes, and polished sets that last.',
-    specialty: 'Acrylic sets, nail art',
-    image:
-      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    name: 'Sofia Lane',
+    name: 'Alize Hildago',
     title: 'Hairstylist',
-    bio: 'Creates smooth blowouts, face-framing styles, and easy everyday finishes.',
-    specialty: 'Blowouts, styling, trims',
-    image:
-      'https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=900&q=80',
+    bio: 'Offers polished hair services with brows and waxing available by appointment.',
+    specialty: 'Hair, eyebrows, waxing',
+    image: '/images/alize-hidalgo-work.jpg',
+  },
+  {
+    name: 'Nails by Oz',
+    title: 'Nail Tech',
+    bio: 'Creates playful nail sets with color, texture, and custom art details.',
+    specialty: 'Themed sets, nail art',
+    image: '/images/nails-sea-theme.jpg',
+  },
+  {
+    name: 'Daisy Daisy Nails',
+    title: 'Nail Tech',
+    bio: 'Brings bright, detailed nail work with a polished finish and creative style.',
+    specialty: 'Detailed sets, nail art',
+    image: '/images/daisy-work.jpg',
   },
 ]
 
@@ -167,7 +162,7 @@ const heroBackground = {
 
     <section id="team" class="section team-section">
       <div class="section-heading">
-        <p class="eyebrow">Meet the team</p>
+        <p class="eyebrow">Meet our team</p>
         <h2>Two barbers, two nail techs, and one hairstylist with their own booking links</h2>
       </div>
 
