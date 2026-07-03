@@ -38,38 +38,35 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## Static Production Build
 
-Build the application for production:
+Generate the static site for deployment:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run generate
 ```
 
-Locally preview production build:
+The generated site is written to:
 
 ```bash
-# npm
+.output/public
+```
+
+## Deploying To Netlify
+
+This project includes `netlify.toml`, so Netlify can build it automatically.
+
+Use these settings if entering them manually:
+
+- Build command: `npm run generate`
+- Publish directory: `.output/public`
+- Node version: `24`
+
+Netlify will provide HTTPS automatically. The config also adds basic browser security headers and cache headers for generated assets.
+
+## Preview Production Build Locally
+
+```bash
+npm run generate
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
