@@ -46,7 +46,7 @@ Generate the static site for deployment:
 npm run generate
 ```
 
-The generated site is written to:
+The local static build is written to:
 
 ```bash
 .output/public
@@ -59,10 +59,10 @@ This project includes `netlify.toml`, so Netlify can build it automatically.
 Use these settings if entering them manually:
 
 - Build command: `npm run generate`
-- Publish directory: `.output/public`
-- Node version: `24`
+- Publish directory: `dist`
+- Node version: `20`
 
-Netlify will provide HTTPS automatically. The config also adds basic browser security headers and cache headers for generated assets.
+Netlify's Nuxt static preset writes the deployable output to `dist` during its build. Netlify will provide HTTPS automatically. The config also adds basic browser security headers and cache headers for generated assets.
 
 ## Preview Production Build Locally
 
